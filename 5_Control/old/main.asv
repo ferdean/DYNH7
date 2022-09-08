@@ -1,0 +1,33 @@
+%% Initialize 
+
+clc; close all; clear all;
+
+run initializationControl.m
+
+%% Braking parameters
+
+clc;
+% cd C:\FERRAN\2_Hyperloop_2022\1_dynamics_H7\5_Control
+w = warning ('off','all');
+
+
+% % 
+% pod.mass.mass = 0.9*mass;
+% x_0 = 1.1; % Medio carenado
+pod.brakes.lim_brake  = 6.4;
+pod.brakes.v_max      = 1.5/3.6;
+pod.brakes.lim_off    = 14.4;
+pod.brakes.d          = 15.4;
+
+
+
+pod.brakes.emergency_flag    = 1;
+pod.brakes.working_actuators = [1 1 1 1]; % [1 1 1 1] = all working
+                                          % [0 1 1 1] = malfunction in (1)
+
+
+% sim('Modelo_control_d_2GDL_2021.slx')
+
+% braking.emergency_1.vel = velocity.Data;
+% braking.emergency_1.pos = position.Data;
+% braking.emergency_1.acc = acceleration.Data;

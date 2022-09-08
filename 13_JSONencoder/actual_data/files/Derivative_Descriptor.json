@@ -1,0 +1,13 @@
+{
+  "name": "Airgap derivative",
+  "board": "LCU",
+  "board_id": 0,
+  "body": {
+    "order": 5,
+    "coef": [
+      1,
+      1,
+      1
+    ]
+  }
+}

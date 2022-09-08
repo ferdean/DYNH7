@@ -1,0 +1,15 @@
+{
+  "name": "Current PI Control",
+  "board": "LPU",
+  "board_id": 1,
+  "body": {
+    "coef": {
+      "k_p": 25,
+      "k_i": 100
+    },
+    "sat": {
+      "sat_inf": -48,
+      "sat_sup": 48
+    }
+  }
+}

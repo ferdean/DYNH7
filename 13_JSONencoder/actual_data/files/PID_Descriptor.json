@@ -1,0 +1,17 @@
+{
+  "name": "1 DOF Airgap PID",
+  "board": "LCU",
+  "board_id": 0,
+  "body": {
+    "order": 5,
+    "coef": {
+      "k_p": -6040.84863,
+      "k_i": -1801.0166,
+      "k_d": -253.718079
+    },
+    "sat": {
+      "sat_inf": -40,
+      "sat_sup": 40
+    }
+  }
+}

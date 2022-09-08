@@ -1,0 +1,19 @@
+{
+  "name": "Airgap IIR Filter",
+  "board": "LCU",
+  "board_id": 0,
+  "sensor": "Front Airgap",
+  "sensor_id": 0,
+  "body": {
+    "type": "butter",
+    "order": 5,
+    "inputs": {
+      "size": 4,
+      "coef": []
+    },
+    "outputs": {
+      "size": 4,
+      "coef": []
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "1 DOF Airgap PID",
+  "board": "LCU",
+  "board_id": 0,
+  "body": {
+    "order": 5,
+    "coef": {
+      "k_p": 0,
+      "k_i": 0,
+      "k_d": 0
+    }
+  }
+}

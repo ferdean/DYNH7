@@ -1,0 +1,10 @@
+{
+  "name": "State Space Controller",
+  "board": "LCU",
+  "board_id": 0,
+  "body": {
+    "rows": 10,
+    "columns": 15,
+    "coef": []
+  }
+}

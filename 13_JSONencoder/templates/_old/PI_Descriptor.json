@@ -1,0 +1,11 @@
+{
+  "name": "Current PI Control",
+  "board": "LPU",
+  "board_id": 1,
+  "body": {
+    "coef": {
+      "k_p": 0,
+      "k_i": 0
+    }
+  }
+}

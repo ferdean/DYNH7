@@ -1,0 +1,77 @@
+x_1 = -1:0.01:0;
+x_2 =  0:0.01:1;
+
+a = -2;
+b =  0.5;
+c =  3;
+
+x_3 = a:0.01:b;
+x_4 = b:0.01:c;
+
+
+alpha = 1;
+beta  = 1;
+
+set(groot,'defaultAxesTickLabelInterpreter','latex');  
+figure(1)
+
+% plot(x_1, phi_1(x_1, alpha, beta), 'Color', 'k', 'LineWidth', 1.5)
+% hold on
+% plot(x_2, phi_2(x_2, alpha, beta), 'Color', 'k', 'LineWidth', 1.5)
+% hold on
+
+x = [x_3, x_4];
+u = [phi_1(thetaInv_1(x_3, b, a), alpha, beta*(b-a)), phi_2(thetaInv_2(x_4, c, b), alpha, beta*(c-b))];
+
+Du = FDM(u,x);
+x_dev 
+
+addpath('C:\FERRAN\2_Hyperloop_2022\1_dynamics_H7\3_Estudio_Inductancia\lib')
+
+plot(x, u, 'Color', 'k', 'LineWidth', 1.5)
+hold on
+plot(, [Du; 1], 'Color', 'r', 'LineWidth', 1.5)
+
+
+grid on
+
+% legend('$\tilde{\psi}$','Interpreter', 'latex')
+ylabel('$\varphi$', 'Interpreter','latex')
+xlabel('x', 'Interpreter','latex')
+
+
+
+function [map] = theta_1(x, b, a)
+    map = x * (b - a) + b;
+end
+
+function [map] = theta_2(x, c, b)
+    map = x * (c - b) + b;
+end
+
+function [map] = thetaInv_1(x, b, a)
+    map = (x - a)/(b - a) - 1;
+end
+
+function [map] = thetaInv_2(x, c, b)
+    map = (x - b)/(c - b);
+end
+
+function [map] = phi_1(x_1, alpha, beta)
+    phi_1_1 = 1 - 3 * x_1.^2 - 2 * x_1.^3;
+    phi_2_1 = - (-x_1 - 2 * x_1.^2 - x_1.^3);
+    
+    map =  alpha * phi_1_1 + beta * phi_2_1;
+end
+
+function [map] = phi_2(x_2, alpha, beta)
+    phi_1_2 = 1 - 3 * x_2.^2 + 2 * x_2.^3;    
+    phi_2_2 = x_2 - 2 * x_2.^2 + x_2.^3;
+
+    map =  alpha * phi_1_2 + beta * phi_2_2;
+end
+
+
+
+
+

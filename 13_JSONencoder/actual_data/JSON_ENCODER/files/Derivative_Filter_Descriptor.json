@@ -1,0 +1,17 @@
+{
+  "name": "Derivative IIR Filter",
+  "board": "LCU",
+  "board_id": 0,
+  "body": {
+    "type": "butter",
+    "order": 5,
+    "inputs": {
+      "size": 6,
+      "coef": []
+    },
+    "outputs": {
+      "size": 5,
+      "coef": []
+    }
+  }
+}
