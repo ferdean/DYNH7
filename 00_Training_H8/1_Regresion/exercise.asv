@@ -1,0 +1,50 @@
+% ╔═══════════════════════════════════════════════════════════════════════╗
+% ║───────────────╔╗─╔╗───────────╔╗──────────╔╗─╔╦═══╦╗──╔╗──────────────║
+% ║───────────────║║─║║───────────║║──────────║║─║║╔═╗║╚╗╔╝║──────────────║
+% ║───────────────║╚═╝╠╗─╔╦══╦══╦═╣║╔══╦══╦══╗║║─║║╚═╝╠╗║║╔╝──────────────║
+% ║───────────────║╔═╗║║─║║╔╗║║═╣╔╣║║╔╗║╔╗║╔╗║║║─║║╔══╝║╚╝║───────────────║
+% ║───────────────║║─║║╚═╝║╚╝║║═╣║║╚╣╚╝║╚╝║╚╝║║╚═╝║║───╚╗╔╝───────────────║
+% ║───────────────╚╝─╚╩═╗╔╣╔═╩══╩╝╚═╩══╩══╣╔═╝╚═══╩╝────╚╝────────────────║
+% ║───────────────────╔═╝║║║──────────────║║──────────────────────────────║
+% ║───────────────────╚══╝╚╝──────────────╚╝──────────────────────────────║
+% ╚═══════════════════════════════════════════════════════════════════════╝
+%% Script initialization
+clear all; clc; close all;
+
+addpath ./data
+% addpath ./solution
+
+
+%% Data acquisition 
+%%% The data of the current-airgap-force map is stored in a CSV file. The
+%%% first task is to acquire (read) said data, sort it, and store it in a 
+%%% struct with the following shape: 
+%
+% data = 
+%  struct with fields:
+%
+%    current: [300×1 double]
+%     airgap: [300×1 double]
+%      force: [300×1 double]
+
+dataFileName = "testingData.csv";
+
+%%% YOUR CODE HERE:
+%
+%
+%
+%
+%
+
+% data = solution_1(dataFileName);
+
+%% Force model
+%%% From the data obtained in the previous section, now you need to develop
+%%% a regression model, in such a way that the output of the code is a
+%%% function whose inputs are current and airgap and its output is force:
+%%%   
+%%%              force = HEMS(airgap, current)
+%
+%   Some help: 
+
+help fit
